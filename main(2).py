@@ -2,7 +2,7 @@ import requests
 import time
 
 
-def send_message(message):
+def send_message(message, token, chat_id):
   url = "https://api.telegram.org/bot"+token+"/sendMessage?chat_id="+chat_id+"&text="
   result = requests.get(url+message)
   return print("ok")
